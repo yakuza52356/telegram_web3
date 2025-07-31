@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Скидання стилів */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f4f4;
+            color: #222;
+            padding: 20px;
+        }
+
+        #container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: #0088cc;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 16px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        button#Buy {
+            padding: 12px 20px;
+            background-color: #0088cc;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button#Buy:hover {
+            background-color: #0077b6;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Привіт, ти попав в мій інтернет-магазин!</h1>
+        <img src="sun.jpg" alt="Товар">
+        <p><em>Це онлайн магазин з різними товарами та низькими цінами</em></p>
+        <button id="Buy">Купити</button>
+    </div>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</body>
+</html>
