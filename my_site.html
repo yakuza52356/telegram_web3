@@ -48,7 +48,7 @@
             color: #444;
         }
         #form {
-            display: None;
+            display: none;
             text-align: center;
         }
         button#buy {
@@ -80,7 +80,8 @@
     <input type="text", placeholder="Phone number", id="user_phone">
     <button id="order">Order</button>
 </form>
-    <script src="https://telegram.org/js/telegram-web-app.js">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
         let tg = window.Telegram.WebApp;
         let buy = document.getElementById("buy");
         let order = document.getElementById("order");
@@ -88,7 +89,7 @@
         buy.addEventListener("click", () => {
             document.getElementById("main").style.display = "none";
             document.getElementById("form").style.display = "block";
-            document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
+            document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name
         });
 
         order.addEventListener("click", () => {
@@ -98,4 +99,5 @@
     </script>
 </body>
 </html>
+
 
