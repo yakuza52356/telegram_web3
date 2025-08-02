@@ -19,7 +19,7 @@
             padding: 20px;
         }
 
-        #container {
+        #main {
             max-width: 500px;
             margin: 0 auto;
             background-color: #fff;
@@ -47,8 +47,11 @@
             margin-bottom: 20px;
             color: #444;
         }
-
-        button#Buy {
+        #form {
+            display: None;
+            text-align: center;
+        }
+        button#buy {
             padding: 12px 20px;
             background-color: #0088cc;
             color: white;
@@ -59,19 +62,40 @@
             transition: background-color 0.2s;
         }
 
-        button#Buy:hover {
+        button#buy:hover {
             background-color: #0077b6;
         }
     </style>
 </head>
 <body>
-    <div id="container">
+    <div id="main">
         <h1>Привіт, ти попав в мій інтернет-магазин!</h1>
         <img src="sun.jpg" alt="Товар">
         <p><em>Це онлайн магазин з різними товарами та низькими цінами</em></p>
-        <button id="Buy">Купити</button>
+        <button id="buy">Купити</button>
     </div>
+<form id="form">
+    <input type="text", placeholder="Name", id="user_name">
+    <input type="text", placeholder="Email", id="user_email">
+    <input type="text", placeholder="Phone number", id="user_phone">
+    <button id="order">Order</button>
+</form>
+    <script src="https://telegram.org/js/telegram-web-app.js">
+        let tg = window.Telegram.WebApp;
+        let buy = document.getElementById("buy");
+        let order = document.getElementById("order");
 
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+        buy.addEventListener("click", () => {
+            document.getElementById("main").style.display = "none";
+            document.getElementById("form").style.display = "block";
+            document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
+        });
+
+        order.addEventListener("click", () => {
+            tg.close();
+        };
+                             
+    </script>
 </body>
 </html>
+
